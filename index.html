@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>منصة د. وفاء مدني للتعلم الإلكتروني</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#F4F7F9;--card:#fff;--ink:#14272e;--mut:#5d7078;--pri:#0F5B6B;--pri2:#E3F1F4;--acc:#E39A2D;--line:#dbe4e8;--ok:#2e8b57}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a1e;--card:#162429;--ink:#e7f0f2;--mut:#98acb3;--pri:#4fb6c8;--pri2:#1c3840;--line:#27393f}}
+:root[data-theme="dark"]{--bg:#0f1a1e;--card:#162429;--ink:#e7f0f2;--mut:#98acb3;--pri:#4fb6c8;--pri2:#1c3840;--line:#27393f}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Tajawal,Tahoma,sans-serif;line-height:1.7}
+button{font:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:center;padding:10px 20px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:18px;color:var(--pri);margin-inline-end:auto;cursor:pointer}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav button,.seg button{background:none;border:0;padding:6px 14px;border-radius:8px;color:var(--ink)}
+nav button.on,.seg button.on{background:var(--pri2);color:var(--pri);font-weight:700}
+.seg{display:flex;border:1px solid var(--line);border-radius:10px;padding:2px}
+main{max-width:1100px;margin:0 auto;padding:24px 20px 60px}
+.btn{background:var(--pri);color:#fff;border:0;border-radius:10px;padding:9px 20px;font-weight:700}
+.btn.alt{background:none;color:var(--pri);border:1.5px solid var(--pri)}
+.btn.done{background:var(--ok)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+h1,h2,h3{line-height:1.3;margin:0 0 10px}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center;padding:28px 0 36px}
+.hero h1{font-size:clamp(28px,4.4vw,46px);font-weight:800}
+.hero p{color:var(--mut);font-size:18px;max-width:52ch}
+.photo{aspect-ratio:4/5;border-radius:24px;background:linear-gradient(160deg,var(--pri),#0a3a45);display:grid;place-items:center;color:#fff;text-align:center;padding:20px;border-bottom:8px solid var(--acc)}
+.photo b{font-size:64px;display:block}
+.photo small{opacity:.8}
+.sec{margin-top:44px}
+.thumb{height:110px;border-radius:10px;margin-bottom:14px;display:grid;place-items:center;font-size:38px;color:#fff}
+.bar{height:8px;background:var(--pri2);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--pri);border-radius:99px}
+.bar.a i{background:var(--acc)}
+.meta{color:var(--mut);font-size:14px}
+.tabs{display:flex;gap:4px;overflow-x:auto;border-bottom:1px solid var(--line);margin:18px 0}
+.tabs button{background:none;border:0;border-bottom:3px solid transparent;padding:10px 16px;color:var(--mut);white-space:nowrap}
+.tabs button.on{color:var(--pri);border-color:var(--pri);font-weight:700}
+.row{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border:0}
+.stat{font-size:32px;font-weight:800;color:var(--pri)}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{padding:10px 8px;text-align:start;border-bottom:1px solid var(--line)}
+.wrap{overflow-x:auto}
+.tag{padding:2px 10px;border-radius:99px;font-size:13px;background:var(--pri2);color:var(--pri)}
+.tag.w{background:#fbe9cc;color:#8a5a0b}
+.chat{height:300px;overflow-y:auto;display:flex;flex-direction:column;gap:10px;padding:6px}
+.msg{max-width:80%;padding:9px 14px;border-radius:14px;background:var(--pri2)}
+.msg.me{align-self:flex-end;background:var(--pri);color:#fff}
+.chatin{display:flex;gap:8px;margin-top:10px}
+input[type=text],input[type=email],input[type=password]{flex:1;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;width:100%}
+.opt{display:block;padding:8px 12px;border:1px solid var(--line);border-radius:10px;margin:6px 0;cursor:pointer}
+.chart{display:flex;align-items:flex-end;gap:14px;height:150px;padding-top:10px}
+.chart div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:4px;height:100%;font-size:13px}
+.chart span{width:100%;border-radius:6px 6px 0 0;background:var(--pri);display:block}
+.chart span.b{background:var(--acc)}
+.pair{display:flex;gap:4px;align-items:flex-end;width:100%;height:100%}
+.pair span{flex:1}
+.toast{position:fixed;bottom:20px;inset-inline:0;margin:auto;width:max-content;max-width:90%;background:var(--ink);color:var(--bg);padding:10px 20px;border-radius:10px;z-index:9}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.photo{max-width:260px;aspect-ratio:1}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo" onclick="go('home')">د. وفاء مدني · التعلم الإلكتروني</div>
+  <nav id="nav"></nav>
+  <div class="seg" role="group" aria-label="الدور">
+    <button id="rs" onclick="role('student')">طالب</button>
+    <button id="ra" onclick="role('admin')">مديرة المنصة</button>
+  </div>
+</header>
+<main id="app"></main>
+<div id="toast" class="toast" hidden></div>
+<script>
+const C=[
+ {id:1,t:'أسس تكنولوجيا التعليم',c:'#0F5B6B',e:'🎓',d:'مدخل لمفاهيم وتطبيقات تكنولوجيا التعليم ودورها في تنمية التفكير.',
+  obj:['يميّز الطالب بين مفاهيم تكنولوجيا التعليم الأساسية','يحلل نماذج التصميم التعليمي ويقارن بينها','يطبّق مبادئ التعلم الرقمي في موقف تعليمي'],
+  mods:['الوحدة 1: مفهوم تكنولوجيا التعليم','الوحدة 2: نظريات التعلم','الوحدة 3: نماذج التصميم التعليمي'],
+  act:['نشاط 1: خريطة مفاهيمية للمفاهيم','واجب 1: مقارنة بين نموذجين تصميميين'],
+  bot:'تكنولوجيا التعليم هي دراسة وتطبيق العمليات والموارد التقنية لتيسير التعلم وتحسين الأداء. أي وحدة تريد أن نراجعها؟'},
+ {id:2,t:'إنتاج الوسائط التعليمية',c:'#7a4fb0',e:'🎬',d:'تصميم وإنتاج مواد تعليمية رقمية: عروض وفيديو وتفاعلات.',
+  obj:['ينتج الطالب وسيطًا تعليميًا رقميًا متكاملًا','يقيّم جودة الوسائط وفق معايير محددة','يوظّف الوسائط في حل مشكلات تعليمية'],
+  mods:['الوحدة 1: أسس تصميم الوسائط','الوحدة 2: العروض التفاعلية','الوحدة 3: الفيديو التعليمي'],
+  act:['نشاط 1: لوحة قصة لدرس مصوّر','واجب 1: إنتاج عرض تفاعلي'],
+  bot:'عند تصميم الشرائح ركّز على فكرة واحدة لكل شريحة وقلّل النص. هل تريد أمثلة على معايير الجودة؟'},
+ {id:3,t:'التعلم الإلكتروني والتفكير الناقد',c:'#E39A2D',e:'🧠',d:'توظيف بيئات التعلم الإلكتروني لتنمية المهارات المعرفية.',
+  obj:['ينمّي الطالب مهارات التحليل والاستنتاج والتقويم','يصمم نشاطًا إلكترونيًا يثير التفكير الناقد','يطبّق استراتيجيات حل المشكلات في بيئة رقمية'],
+  mods:['الوحدة 1: بيئات التعلم الإلكتروني','الوحدة 2: المهارات المعرفية','الوحدة 3: استراتيجيات التفكير الناقد'],
+  act:['نشاط 1: تحليل حالة دراسية','واجب 1: تصميم نشاط تفكير ناقد'],
+  bot:'التفكير الناقد يعني فحص الأدلة وتقييم الحجج قبل الحكم. جرّب تحليل حالة من الوحدة الثانية وأنا أساعدك.'}];
+const S=[['نور أحمد',92,85,100,'شغّالة'],['محمد علي',70,60,66,'شغّال'],['سارة حسن',100,90,100,'مكتمل'],['يوسف إبراهيم',35,20,0,'يحتاج دعم'],['هبة محمود',80,75,66,'شغّالة']];
+let st={role:'student',page:'home',cid:null,tab:'ov',user:null,enr:[],pre:{},post:{},done:{},chat:{}};
+try{const x=localStorage.getItem('lms');if(x)Object.assign(st,JSON.parse(x),{page:'home'})}catch(e){}
+function save(){try{localStorage.setItem('lms',JSON.stringify({role:st.role,user:st.user,enr:st.enr,pre:st.pre,post:st.post,done:st.done}))}catch(e){}}
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.hidden=false;setTimeout(()=>t.hidden=true,2200)}
+function go(p,id,tab){st.page=p;if(id)st.cid=id;st.tab=tab||'ov';render();scrollTo(0,0)}
+function role(r){st.role=r;st.page=r==='admin'?'admin':'home';save();render()}
+function prog(c){const n=c.mods.length+c.act.length;const d=Object.keys(st.done).filter(k=>k.startsWith(c.id+':')).length;return Math.round(Math.min(d/n,1)*100)}
+function enroll(id){if(!st.user){go('login');return}if(!st.enr.includes(id))st.enr.push(id);save();toast('تم التسجيل في المقرر');go('course',id)}
+function login(e){const v=document.getElementById('em').value.trim();if(!v.includes('@')){toast('اكتب بريدًا إلكترونيًا صحيحًا');return}st.user=v;save();toast('تم تسجيل الدخول');go('courses')}
+function logout(){st.user=null;save();go('home')}
+function bar(p,cls){return `<div class="bar ${cls||''}" role="progressbar" aria-valuenow="${p}" aria-valuemin="0" aria-valuemax="100"><i style="width:${p}%"></i></div>`}
+
+function nav(){const n=document.getElementById('nav');
+ const a=st.role==='admin'?[['admin','لوحة التحكم'],['acourses','المقررات'],['analytics','تحليلات التعلم']]:[['home','الرئيسية'],['courses','المقررات'],['dash','لوحتي']];
+ n.innerHTML=a.map(([k,l])=>`<button class="${st.page===k?'on':''}" onclick="go('${k}')">${l}</button>`).join('')+(st.role==='student'?(st.user?`<button onclick="logout()">خروج</button>`:`<button onclick="go('login')">دخول / تسجيل</button>`):'');
+ document.getElementById('rs').className=st.role==='student'?'on':'';document.getElementById('ra').className=st.role==='admin'?'on':''}
+
+function cardC(c){const e=st.enr.includes(c.id);return `<div class="card"><div class="thumb" style="background:${c.c}">${c.e}</div><h3>${c.t}</h3><p class="meta">${c.d}</p><p class="meta">د. وفاء مدني · كلية التربية النوعية</p>${e?bar(prog(c))+`<p class="meta">التقدم ${prog(c)}%</p><button class="btn" onclick="go('course',${c.id})">متابعة المقرر</button>`:`<button class="btn" onclick="enroll(${c.id})">سجّل في المقرر</button>`}</div>`}
+
+function home(){return `<section class="hero"><div><h1>بيئة تعلّم جامعية تنمّي التفكير، لا الحفظ</h1><p>منصة د. وفاء مدني، مدرس تكنولوجيا التعليم بكلية التربية النوعية: مقررات وأنشطة واختبارات قبلي وبعدي، ومساعد ذكي لكل مقرر.</p><p><button class="btn" onclick="go('${st.user?'courses':'login'}')">${st.user?'مقرراتي':'سجّل الآن بالبريد'}</button> <button class="btn alt" onclick="go('courses')">تصفّح المقررات</button></p></div>
+ <div class="photo"><div><b>و</b>ضع صورة د. وفاء هنا<br><small>د. وفاء مدني<br>مدرس تكنولوجيا التعليم</small></div></div></section>
+ <section class="sec"><h2>المقررات المتاحة</h2><div class="grid">${C.map(cardC).join('')}</div></section>
+ <section class="sec grid">
+  <div class="card"><h3>تنمية المهارات المعرفية</h3><p class="meta">أهداف واضحة لكل مقرر وأنشطة تدفع إلى التحليل والاستنتاج وحل المشكلات.</p></div>
+  <div class="card"><h3>مساعد ذكي لكل مقرر</h3><p class="meta">شات بوت يجيب من محتوى المقرر نفسه ويرشد الطالب في الأنشطة.</p></div>
+  <div class="card"><h3>تحليلات التعلم</h3><p class="meta">تعرف الدكتورة من دخل المقرر ومن سلّم واجباته ومن يحتاج دعمًا.</p></div></section>`}
+
+function login_(){return `<div class="card" style="max-width:420px;margin:30px auto"><h2>تسجيل الدخول / حساب جديد</h2><p class="meta">سجّل بالبريد الإلكتروني (عرض تجريبي: لا يُرسل شيء).</p><p><input type="email" id="em" placeholder="example@email.com" aria-label="البريد الإلكتروني"></p><p><input type="password" placeholder="كلمة المرور" aria-label="كلمة المرور"></p><button class="btn" onclick="login()">دخول</button></div>`}
+
+function course(){const c=C.find(x=>x.id===st.cid);const T=[['ov','نظرة عامة'],['ob','الأهداف'],['ct','المحتوى'],['ac','الأنشطة'],['pre','الاختبار القبلي'],['post','الاختبار البعدي'],['bot','المساعد الذكي']];
+ const k=c.id+':';let b='';
+ if(st.tab==='ov')b=`<p>${c.d}</p><p class="meta">المدرّسة: د. وفاء مدني · المتطلبات: حاسوب واتصال بالإنترنت</p>${bar(prog(c))}<p class="meta">تقدمك ${prog(c)}%</p>`;
+ if(st.tab==='ob')b=`<h3>الأهداف التعليمية</h3>`+c.obj.map(o=>`<div class="row"><span>${o}</span><span class="tag">معرفي</span></div>`).join('');
+ if(st.tab==='ct'||st.tab==='ac'){const L=st.tab==='ct'?c.mods:c.act;b=L.map((m,i)=>{const key=k+st.tab+i;const d=st.done[key];return `<div class="row"><span>${m}</span><button class="btn ${d?'done':'alt'}" onclick="mark('${key}')">${d?'تم ✓':st.tab==='ct'?'علّم كمكتمل':'سلّم'}</button></div>`}).join('')}
+ if(st.tab==='pre'||st.tab==='post'){const q=[['ما الهدف الأساسي من تكنولوجيا التعليم؟',['تيسير التعلم وتحسين الأداء','زيادة الأجهزة فقط','الاستغناء عن المعلم'],0],['أي مهارة معرفية تتطلب فحص الأدلة؟',['التذكر','التفكير الناقد','النسخ'],1],['أفضل نشاط لتنمية حل المشكلات؟',['حفظ نص','دراسة حالة','مشاهدة صامتة'],1]];const r=st[st.tab];
+  b=r[c.id]!=null?`<h3>نتيجتك: ${r[c.id]}%</h3>${bar(r[c.id],'a')}`+(st.tab==='post'&&st.pre[c.id]!=null?`<p class="meta">القبلي ${st.pre[c.id]}% ← البعدي ${r[c.id]}%</p>`:''):q.map((x,i)=>`<div class="card" style="margin-bottom:12px"><b>${i+1}. ${x[0]}</b>${x[1].map((o,j)=>`<label class="opt"><input type="radio" name="q${i}" value="${j}"> ${o}</label>`).join('')}</div>`).join('')+`<button class="btn" onclick="submitT(${c.id},[0,1,1])">أرسل الإجابات</button>`}
+ if(st.tab==='bot'){const m=st.chat[c.id]||(st.chat[c.id]=[{me:0,t:'أهلًا! أنا مساعد مقرر «'+c.t+'». اسألني عن أي وحدة.'}]);
+  b=`<div class="chat" id="chat">${m.map(x=>`<div class="msg ${x.me?'me':''}">${x.t}</div>`).join('')}</div><div class="chatin"><input type="text" id="ci" placeholder="اكتب سؤالك" aria-label="سؤالك" onkeydown="if(event.key==='Enter')ask(${c.id})"><button class="btn" onclick="ask(${c.id})">إرسال</button></div><p class="meta">ردود تجريبية. عند الربط ببرمجيات الذكاء الاصطناعي يجيب من مواد المقرر.</p>`}
+ return `<button class="btn alt" onclick="go('courses')">← المقررات</button><h1 style="margin-top:14px">${c.e} ${c.t}</h1><div class="tabs" role="tablist">${T.map(([a,l])=>`<button class="${st.tab===a?'on':''}" onclick="go('course',${c.id},'${a}')">${l}</button>`).join('')}</div><div class="card">${b}</div>`}
+function mark(k){st.done[k]=!st.done[k];if(!st.done[k])delete st.done[k];save();render()}
+function submitT(id,ans){let ok=0;ans.forEach((a,i)=>{const s=document.querySelector(`input[name=q${i}]:checked`);if(s&&+s.value===a)ok++});st[st.tab][id]=Math.round(ok/ans.length*100);save();render()}
+function ask(id){const i=document.getElementById('ci'),v=i.value.trim();if(!v)return;const m=st.chat[id];m.push({me:1,t:v});m.push({me:0,t:C.find(x=>x.id===id).bot});render();const ch=document.getElementById('chat');ch.scrollTop=ch.scrollHeight}
+
+function dash(){const my=C.filter(c=>st.enr.includes(c.id));
+ return `<h1>لوحة الطالب</h1>`+(my.length?`<div class="grid">${my.map(cardC).join('')}</div><div class="card" style="margin-top:18px"><h3>نتائج الاختبارات</h3><div class="wrap"><table><tr><th>المقرر</th><th>قبلي</th><th>بعدي</th></tr>${my.map(c=>`<tr><td>${c.t}</td><td>${st.pre[c.id]??'—'}</td><td>${st.post[c.id]??'—'}</td></tr>`).join('')}</table></div></div>`:`<div class="card"><p>لم تسجّل في أي مقرر بعد.</p><button class="btn" onclick="go('courses')">اختر مقررًا</button></div>`)}
+
+function admin(){return `<h1>لوحة تحكم د. وفاء مدني</h1><div class="grid">
+ <div class="card"><div class="stat">${S.length}</div>طالب مسجّل</div><div class="card"><div class="stat">4</div>نشِط هذا الأسبوع</div><div class="card"><div class="stat">3</div>مقررات</div><div class="card"><div class="stat">1</div>طالب يحتاج دعمًا</div></div>
+ <h2 class="sec">إدارة المقررات</h2><div class="card">${C.map(c=>`<div class="row"><span>${c.e} ${c.t}</span><span><button class="btn alt" onclick="toast('تعديل المقرر (عرض تجريبي)')">تعديل</button> <button class="btn alt" onclick="toast('إضافة نشاط أو اختبار (عرض تجريبي)')">+ نشاط / اختبار</button></span></div>`).join('')}<p><button class="btn" onclick="toast('إضافة مقرر جديد (عرض تجريبي)')">+ مقرر جديد</button></p></div>`}
+function acourses(){return admin().split('<h2 class="sec">')[1]?'<h2>'+admin().split('<h2 class="sec">')[1]:''}
+
+function analytics(){const avg=(i)=>Math.round(S.reduce((a,s)=>a+s[i],0)/S.length);
+ return `<h1>تحليلات التعلم</h1><div class="grid"><div class="card"><h3>متوسط القبلي والبعدي</h3><div class="chart"><div><div class="pair"><span style="height:${avg(2)}%" title="قبلي"></span><span class="b" style="height:${avg(1)}%" title="بعدي"></span></div></div></div><p class="meta">القبلي ${avg(2)}% · البعدي ${avg(1)}% (الثاني: برتقالي = قبلي)</p></div>
+ <div class="card"><h3>إتمام الأنشطة</h3>${S.map(s=>`<div style="margin:8px 0"><span class="meta">${s[0]} ${s[3]}%</span>${bar(s[3],'a')}</div>`).join('')}</div></div>
+ <div class="card" style="margin-top:18px"><h3>متابعة الطلاب</h3><div class="wrap"><table><tr><th>الطالب</th><th>الدخول للمقرر</th><th>الواجبات</th><th>الحالة</th></tr>${S.map(s=>`<tr><td>${s[0]}</td><td>${s[1]}%</td><td>${s[3]}%</td><td><span class="tag ${s[4]==='يحتاج دعم'?'w':''}">${s[4]}</span></td></tr>`).join('')}</table></div><p class="meta">بيانات توضيحية. تُستبدل ببيانات حقيقية عند ربط قاعدة البيانات.</p></div>`}
+
+function render(){nav();const p=st.page;const m={home,courses:()=>`<h1>المقررات</h1><div class="grid">${C.map(cardC).join('')}</div>`,login:login_,course,dash,admin,acourses,analytics};
+ document.getElementById('app').innerHTML=(m[p]||home)()}
+render();
+</script>
+</body>
+</html>
